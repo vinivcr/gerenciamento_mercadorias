@@ -17,7 +17,7 @@ Este projeto é uma aplicação para gerenciar mercadorias, com funcionalidades 
 - **Backend**: Flask
 - **Banco de Dados**: MySQL
 - **Estilização**: CSS personalizado
-- **Gráficos**: Utilizados para visualização de movimentação de produtos (implementação futura)
+- **Gráficos**: Utilizados para visualização de movimentação de produtos
 
 ## Estrutura do Projeto
 
