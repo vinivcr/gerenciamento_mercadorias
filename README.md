@@ -35,7 +35,7 @@ Este projeto é uma aplicação para gerenciar mercadorias, com funcionalidades 
     │   ├── components
     │   │   ├── MercadoriaForm.js       # Formulário de cadastro de mercadorias
     │   │   ├── TransactionForm.js      # Formulário de movimentação e atualização de mercadorias
-    │   │   └── TransactionsChart.js    # Gráfico de movimentação de mercadorias (implementação futura)
+    │   │   └── TransactionsChart.js    # Gráfico de movimentação de mercadorias 
     │   ├── services
     │   │   └── api.js                  # Funções de chamada de API
     │   ├── App.js                      # Componente principal
