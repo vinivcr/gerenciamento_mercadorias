@@ -1,0 +1,4 @@
+pip install Flask
+pip install flask-cors
+pip install reportlab           
+pip install pymysql

@@ -1,0 +1,306 @@
+
+body {
+    font-family: 'Roboto', sans-serif;  /* Definindo a fonte Roboto para o corpo da página */
+  }
+
+.chart-container {
+    width: 100%;              /* Ocupa toda a largura disponível */
+    max-width: 800px;         /* Largura máxima de 800px */
+    height: 600px;            /* Define a altura fixa */
+    margin: 0 auto;           /* Centraliza o gráfico */
+    padding: 10px;            /* Adiciona um pequeno espaçamento interno */
+    box-sizing: border-box;   /* Garante que o padding não afete a largura total */
+    position: relative;       /* Garante que o gráfico se posicione corretamente */
+    overflow: hidden;         /* Garante que o gráfico não ultrapasse a borda */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 90%;            /* A largura do gráfico vai ser 90% da tela */
+        height: 300px;         /* Diminui a altura em telas menores */
+    }
+}
+
+/* Responsividade para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+    .chart-container {
+        width: 100%;           /* Ocupa 100% da largura disponível */
+        height: 250px;         /* Diminui ainda mais a altura */
+    }
+}
+
+.chart-container canvas {
+    width: 100% !important;   /* O gráfico ocupará 100% da largura do contêiner */
+    height: 100% !important;  /* O gráfico ocupará 100% da altura do contêiner */
+    object-fit: contain;      /* Faz com que o gráfico se ajuste sem ultrapassar a borda */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TransactionForm.css */
+
+
+button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Verde escuro */
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* O formulário ocupa toda a largura do contêiner */
+}
+
+select, input, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Verde escuro */
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.toggle-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.toggle-buttons button.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;  /* Garante que o container ocupe 100% da largura disponível */
+}
+
+.search-container input {
+    width: 100%;  /* Faz a caixa de pesquisa ocupar toda a largura do container */
+    padding: 10px;  /* Ajusta o padding para consistência */
+    box-sizing: border-box;  /* Garante que o padding não afete o tamanho total */
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+.delete-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f1f1f1;
+}
+
+
+  
+  /* Estilos principais do App */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Container para o formulário e gráfico lado a lado */
+  .form-chart-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Formulário */
+  .form-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Gráfico */
+  .chart-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Seção de exportação */
+  .export-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Estilo dos botões e selects */
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Layout para telas menores, o gráfico e o formulário se empilham */
+    .form-chart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .form-container, .chart-container {
+        width: 100%;
+        max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajuste adicional para dispositivos menores */
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+  
+    select {
+        width: 100%;
+    }
+  }
+  

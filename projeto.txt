@@ -1,0 +1,14 @@
+/backend
+├── app.py            # Arquivo principal do Flask
+├── models.py         # Definição de classes para as tabelas do banco
+├── config.py         # Configurações do banco de dados
+└── requirements.txt  # Dependências
+/frontend
+├── public
+├── src
+│   ├── App.js         # Componente principal
+│   ├── components     # Componentes da aplicação
+│   ├── services       # Serviços para chamadas de API
+│   └── index.js       # Arquivo de entrada
+└── package.json       # Dependências do projeto
+
