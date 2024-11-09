@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    network_mode: "host"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+    network_mode: "host"
+    environment:
+      - FLASK_ENV=production  # Variável de ambiente para o backend (ajuste conforme necessário)
