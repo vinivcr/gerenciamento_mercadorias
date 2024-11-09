@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS mstarsupply;
-USE mstarsupply;
+CREATE DATABASE IF NOT EXISTS mstarsupply_db;
+USE mstarsupply_db;
 
 CREATE TABLE Mercadorias (
     id INT AUTO_INCREMENT PRIMARY KEY,
