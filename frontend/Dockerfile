@@ -5,10 +5,10 @@ FROM nginx:alpine
 COPY build /usr/share/nginx/html
 
 # Copiar o package-lock.json caso precise para dependências ou para verificar o arquivo
-COPY package-lock.json /usr/share/nginx/
+#COPY package-lock.json /usr/share/nginx/
 
 # Expor a porta 80 para o frontend
-EXPOSE 3000
+EXPOSE 80
 
 # Comando para rodar o nginx
 CMD ["nginx", "-g", "daemon off;"]

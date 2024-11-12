@@ -164,7 +164,7 @@ function TransactionForm() {
         const confirmDelete = window.confirm("Tem certeza que deseja excluir esta mercadoria?");
         
         if (confirmDelete) {
-            const url = `http://127.0.0.1:5000/mercadorias/${transaction.mercadoria_id}`;
+            const url = `http://localhost:5000/mercadorias/${transaction.mercadoria_id}`;
             
             fetch(url, {
                 method: 'DELETE',  // Método DELETE para excluir

@@ -1,15 +1,19 @@
-version: '3'
+version: "3"
 services:
   frontend:
-    build:
-      context: ./frontend
-    network_mode: "host"
-    depends_on:
-      - backend
-
+    build: ./frontend
+    ports:
+      - "80:80"
+    networks:
+      - app-network
   backend:
-    build:
-      context: ./backend
-    network_mode: "host"
-    environment:
-     
+    build: ./backend
+    image: backend
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
