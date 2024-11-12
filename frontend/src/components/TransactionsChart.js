@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';  // Alterado para Line
 import './css/styles.css'; // Adicione estilos conforme necessário
+import {API_URL} from '../services/api'
 
 function TransactionsChart() {
     const [mercadorias, setMercadorias] = useState([]);
@@ -9,7 +10,7 @@ function TransactionsChart() {
     const [filteredMercadorias, setFilteredMercadorias] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/relatorio')
+        fetch(`${API_URL}/relatorio`)
             .then(response => response.json())
             .then(data => {
                 setMercadorias(data);

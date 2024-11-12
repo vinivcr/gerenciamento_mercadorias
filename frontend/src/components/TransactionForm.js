@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import './css/styles.css';
 import MercadoriaForm from './MercadoriaForm';
+import { API_URL} from '../services/api';
 
 function TransactionForm() {
     const [mercadorias, setMercadorias] = useState([]); // Estado para armazenar as mercadorias
@@ -38,7 +39,7 @@ function TransactionForm() {
     const [showUpdate, setShowUpdate] = useState('');  // Novo estado para controlar a atualização
     
     const refreshData = () => {
-        fetch('http://localhost:5000/mercadorias')
+        fetch(`${API_URL}/mercadorias/mercadorias`)
             .then(response => response.json())
             .then(data => {
                 setMercadorias(data);
@@ -52,7 +53,7 @@ function TransactionForm() {
 
     useEffect(() => {
         // Fetch data from the API when the component mounts
-        fetch('http://localhost:5000/mercadorias')
+        fetch(`${API_URL}/mercadorias`)
             .then(response => response.json())
             .then(data => {
                 console.log("Mercadorias recebidas da API:", data);
@@ -138,7 +139,7 @@ function TransactionForm() {
     };
 
     const handleUpdateMercadoria = () => {
-        const url = `http://localhost:5000/mercadorias/${transaction.mercadoria_id}`;
+        const url = `${API_URL}/mercadorias/${transaction.mercadoria_id}`;
     
         fetch(url, {
             method: 'PUT',
@@ -164,7 +165,7 @@ function TransactionForm() {
         const confirmDelete = window.confirm("Tem certeza que deseja excluir esta mercadoria?");
         
         if (confirmDelete) {
-            const url = `http://localhost:5000/mercadorias/${transaction.mercadoria_id}`;
+            const url = `${API_URL}/mercadorias/${transaction.mercadoria_id}`;
             
             fetch(url, {
                 method: 'DELETE',  // Método DELETE para excluir

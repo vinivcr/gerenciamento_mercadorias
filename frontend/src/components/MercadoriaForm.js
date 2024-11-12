@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addMercadoria} from '../services/api';
+import {API_URL, addMercadoria} from '../services/api';
 
 
 function MercadoriaForm({ mercadoria}) {
@@ -16,7 +16,7 @@ function MercadoriaForm({ mercadoria}) {
         e.preventDefault();
 
         // Fazer a requisição GET para verificar se o número de registro já existe
-        fetch('http://localhost:5000/mercadorias')
+        fetch(`${API_URL}/mercadorias`)
             .then((response) => response.json())
             .then((data) => {
                 // Verificar se algum item tem o mesmo 'numero_registro'

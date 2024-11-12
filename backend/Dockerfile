@@ -1,17 +1,17 @@
-# Usa uma imagem base do Python
-FROM python:3.10
+# backend/Dockerfile
+FROM python:3.9
 
-# Define o diretório de trabalho dentro do container
+# Configurar diretório de trabalho
 WORKDIR /app
 
-# Copia os arquivos do backend para o diretório de trabalho
-COPY . .
-
-# Instala as dependências
+# Copiar arquivos de código e requisitos
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# Expõe a porta onde o backend vai rodar (ajuste conforme a configuração do app.py)
+COPY . .
+
+# Expor a porta onde o Flask irá rodar
 EXPOSE 5000
 
-# Comando para iniciar o backend
+# Rodar o Flask
 CMD ["python", "app.py"]
