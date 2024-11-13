@@ -123,8 +123,6 @@ Este projeto é uma aplicação para gerenciar mercadorias, com funcionalidades 
 
 ## Possíveis Melhorias
 
-- Implementação de gráficos para visualização das movimentações de entrada e saída.
-- Exportação de relatórios em PDF.
 - Integração com autenticação de usuário.
 
 ## Contribuição
