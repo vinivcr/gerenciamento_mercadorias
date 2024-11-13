@@ -1,5 +1,5 @@
-//const API_URL = process.env.REACT_APP_API_URL;
-const API_URL = "http://localhost:5000";
+//const API_URL = process.env.REACT_APP_API_URL; configuração futura
+const API_URL = "http://52.67.116.9:5000";
 
 export {API_URL}; 
 

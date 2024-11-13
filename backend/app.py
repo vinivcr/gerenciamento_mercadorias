@@ -2,11 +2,9 @@ from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 from models import get_db_connection, add_mercadoria, fetch_all_mercadorias
 from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
-import calendar
 import io
 
 app = Flask(__name__)
@@ -287,3 +285,4 @@ def generate_pdf():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+    #app.run(debug=True)

@@ -91,7 +91,7 @@ function TransactionForm() {
 
     const handleTransactionSubmit = (e) => {
         e.preventDefault();
-        const url = isEntrada ? 'http://localhost:5000/entradas' : 'http://localhost:5000/saidas';
+        const url = isEntrada ? `${API_URL}/entradas` : `${API_URL}/saidas`;
     
         fetch(url, {
             method: 'POST',
@@ -284,7 +284,7 @@ function TransactionForm() {
                     <button type="button" onClick={handleUpdateMercadoria}>
                         Atualizar Mercadoria
                     </button>
-                    <button type="button" onClick={handleDeleteMercadoria}>
+                    <button type="delete-button" onClick={handleDeleteMercadoria}>
                         Excluir Mercadoria
                     </button>
                 </form>

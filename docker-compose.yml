@@ -1,19 +1,21 @@
-version: "3"
 services:
-  frontend:
-    build: ./frontend
-    ports:
-      - "80:80"
-    networks:
-      - app-network
   backend:
-    build: ./backend
-    image: backend
-    ports:
-      - "5000:5000"
-    networks:
-      - app-network
+    build:
+      context: ./backend
+    container_name: backend
+#    ports:
+#      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=${DATABASE_URL}
+    network_mode: "host"
 
-networks:
-  app-network:
-    driver: bridge
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+#    ports:
+#      - "80:3000"
+#    environment:
+#      - REACT_APP_API_URL=http://52.67.116.9:5000  # URL para acessar a API Flask
+    network_mode: "host"
