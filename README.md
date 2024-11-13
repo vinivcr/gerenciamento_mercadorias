@@ -7,7 +7,7 @@ Este projeto é uma aplicação para gerenciar mercadorias, com funcionalidades 
 ## Funcionalidades
 
 - **Cadastro de Mercadorias**: Formulário para adicionar uma nova mercadoria, incluindo informações como Nome, Número de Registro, Fabricante, Tipo, e Descrição.
-- **Atualização de Mercadorias**: Permite pesquisar uma mercadoria e atualizar suas informações com um formulário preenchido automaticamente com os dados atuais da mercadoria.
+- **Atualização e Exclusão de Mercadorias**: Permite pesquisar uma mercadoria e atualizar suas informações com um formulário preenchido automaticamente com os dados atuais da mercadoria ou excluí-la.
 - **Registro de Entradas e Saídas**: Registra a entrada e saída de mercadorias, com detalhes de quantidade, data/hora e local.
 - **Pesquisa Dinâmica**: Campo de pesquisa com sugestões automáticas que exibem mercadorias correspondentes ao que está sendo digitado.
 
